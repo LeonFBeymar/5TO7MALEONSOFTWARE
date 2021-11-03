@@ -13,7 +13,7 @@ namespace SoftwareFactory.Core
         this.id = Id;
         this.descripcion = Descripcion;
         this.complejidad = Complejidad;
-        proyecto = new List<Proyecto>();
+        proyecto = new Proyecto();
         tecnologia = new Tecnologia();
     }
     }
