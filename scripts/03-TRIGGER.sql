@@ -1,3 +1,5 @@
+USE softwarefactory;
+SELECT 'Creando Triggers' AS 'Estado';
 DROP TRIGGER IF EXISTS befInsertTarea;
 DELIMITER $$
 CREATE TRIGGER befInsertTarea BEFORE INSERT ON tarea
@@ -21,7 +23,4 @@ BEGIN
 					SELECT NEW.cuil, idTecnologia, 0
                     FROM tecnologia; 
 END $$
-
-INSERT INTO empleado(cuil, nombre, apellido, contratacion)
-			  VALUES(1, "Fernan", "flo", '2020-02-01');
 

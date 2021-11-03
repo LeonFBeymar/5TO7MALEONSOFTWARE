@@ -1,3 +1,6 @@
+USE softwarefactory;
+SELECT 'Creando SPSF' AS 'Estado';
+
 DELIMITER $$
 CREATE PROCEDURE AltaTecnologia (unidTecnologia TINYINT, unaTecnologia VARCHAR(20), unCostoBase DECIMAL(10,2))
 BEGIN

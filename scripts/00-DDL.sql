@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS SoftwareFactory;
-CREATE DATABASE SoftwareFactory CHARACTER SET UTF8;;
-USE SoftwareFactory;
+DROP DATABASE IF EXISTS softwarefactory;
+CREATE DATABASE softwarefactory CHARACTER SET UTF8;
+USE softwarefactory;
 
 CREATE TABLE Cliente(
 	cuit INT NOT NULL,
