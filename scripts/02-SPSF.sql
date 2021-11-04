@@ -1,7 +1,8 @@
-USE softwarefactory;
-SELECT 'Creando SPSF' AS 'Estado';
-
 DELIMITER $$
+USE softwarefactory $$
+SELECT 'Creando SPSF' AS 'Estado' $$
+
+
 CREATE PROCEDURE AltaTecnologia (unidTecnologia TINYINT, unaTecnologia VARCHAR(20), unCostoBase DECIMAL(10,2))
 BEGIN
 	INSERT INTO Tecnologia (idTecnologia, Tecnologia, CostoBase)
@@ -53,15 +54,15 @@ BEGIN
     
     
     if(EXISTS(SELECT Calificacion
-			  FROM Experiencia 
-              WHERE cuil = unCuil
-              AND idTecnologia = unidTecnologia))Then
+		FROM Experiencia 
+		WHERE cuil = unCuil
+		AND idTecnologia = unidTecnologia))Then
 					UPDATE Experiencia
 					SET Calificacion = unaCalificacion
 					WHERE Cuil = unCuil
                     AND idTecnologia = unidTecnologia;
-			   else
-               INSERT INTO Experiencia (Cuil, idTecnologia, Calificacion)
+		else
+		INSERT INTO Experiencia (Cuil, idTecnologia, Calificacion)
 				VALUES (unCuil, unidTecnologia, unaCalificacion);
 	end if;
     
@@ -78,11 +79,6 @@ BEGIN
 END $$
 
 
-
-
-
-
-
 DELIMITER $$
 CREATE FUNCTION complejidadPromedio (unIdProyecto SMALLINT) RETURNS FLOAT
 BEGIN 
@@ -97,7 +93,6 @@ BEGIN
 END $$
 
 
-
 DELIMITER $$
 CREATE FUNCTION sueldoMensual (unCuil INT) RETURNS DECIMAL(10.2)
 BEGIN
@@ -106,7 +101,7 @@ BEGIN
 SELECT TIMESTAMPDIFF(YEAR, contratacion, CURDATE()) * 1000 + SUM(calificacion * costoBase) INTO sueldoApagar
     FROM experiencia E
     INNER JOIN empleado EM on E.cuil = EM.cuil
-     INNER JOIN Tecnologia T on E.idTecnologia = T.idTecnologia
+    INNER JOIN Tecnologia T on E.idTecnologia = T.idTecnologia
     WHERE EM.cuil = unCuil;
     
     RETURN sueldoApagar;

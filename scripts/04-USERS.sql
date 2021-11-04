@@ -1,5 +1,6 @@
-USE softwarefactory;
-SELECT 'Creando Users' AS 'Estado';
+DELIMITER $$
+USE softwarefactory $$
+SELECT 'Creando Users' AS 'Estado' $$
 
 CREATE USER IF NOT EXISTS "Adminitrador"@"%" IDENTIFIED BY "passwordAdministrador";
 CREATE USER IF NOT EXISTS "PM"@"10.3.45.%" IDENTIFIED BY "passwordPM";

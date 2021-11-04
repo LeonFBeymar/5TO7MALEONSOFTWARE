@@ -1,5 +1,6 @@
-USE softwarefactory;
-SELECT 'Vaciando Tablas' AS 'Estado';
+DELIMITER $$
+USE softwarefactory $$
+SELECT 'Vaciando Tablas' AS 'Estado'$$
 SET FOREIGN_KEY_CHECKS=0;
 	TRUNCATE TABLE Tarea;
 	TRUNCATE TABLE Requerimiento;
