@@ -2,13 +2,18 @@ namespace SoftwareFactory.Core
 {
     public class Tarea
     {
-        public int id {get; set;}
-        public Empleado empleado = new Empleado();
+        public int Id {get; set;}
+        public Empleado empleado;
         public DateTime inicio {get; set;}
         public DateTime fin {get; set;}
-        public Requerimiento requerimiento = new Requerimiento();
+        public Requerimiento requerimiento;
     
-    public Tarea(int Id, DateTime Inicio, DateTime Fin)
+    public Tarea()
+    {
+
+    }
+    
+    public Tarea(DateTime Inicio, DateTime Fin)
     {
         this.id = Id;
         this.inicio = Inicio;

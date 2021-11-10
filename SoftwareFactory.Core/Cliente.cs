@@ -4,8 +4,13 @@ namespace SoftwareFactory.Core
     {
         public int cuit {get; set;}
         public string RazonSocial { get; set;}
-        public List<Proyecto> proyecto = new List<Proyecto>();
+        public List<Proyecto> proyecto;
 
+    public Cliente()
+    {
+        
+    }
+    
     public Cliente(int Cuit, string razonSocial)
     {
         this.cuit = Cuit;

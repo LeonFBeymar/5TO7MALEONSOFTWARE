@@ -2,11 +2,16 @@ namespace SoftwareFactory.Core
 {
     public class Experiencia
     {
-        public Empleado empleado = new Empleado();
-        public Tecnologia tecnologia = new Tecnologia();
+        public Empleado empleado;
+        public Tecnologia tecnologia;
         public ushort calificacion {get; set;}
     
-    public Experiencia(int Calificacion)
+    public Experiencia()
+    {
+        
+    }
+    
+    public Experiencia(ushort Calificacion)
     {
         this.calificacion = Calificacion;
         empleado = new Empleado();

@@ -2,17 +2,22 @@ namespace SoftwareFactory.Core
 {
     public class Proyecto
     {
-        public int id {get; set;}
-        public Cliente cliente = new Cliente();
+        public int Id {get; set;}
+        public Cliente cliente;
         public string descripcion {get; set;}
         public double presupuesto {get; set;}
         public DateTime inicio {get; set;}
         public DateTime fin {get; set;}
-        public List<Requerimiento> requerimientos = new List<Requerimiento>(); 
+        public List<Requerimiento> requerimientos; 
 
-        public Proyecto(int Id, string Descripcion, double Presupuesto, DateTime Inicio, DateTime Fin)
+        public Proyecto()
         {
-            this.id = Id;
+
+        }
+
+
+        public Proyecto(string Descripcion, double Presupuesto, DateTime Inicio, DateTime Fin)
+        {
             this.descripcion = Descripcion;
             this.presupuesto = Presupuesto;
             this.inicio = Inicio;

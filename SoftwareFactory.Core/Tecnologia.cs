@@ -2,12 +2,16 @@ namespace SoftwareFactory.Core
 {
     public class Tecnologia
     {
-        public int id {get; set;}
+        public int Id {get; set;}
         public string tecnologia {get; set;}
         public decimal costoBase {get; set;}
-    public Tecnologia(int Id, string Tcnologia, decimal Costobase)
+    
+    public Tecnologia()
     {
-        this.id = Id;
+
+    }
+    public Tecnologia(string Tcnologia, decimal Costobase)
+    {
         this.tecnologia = Tcnologia;
         this.costoBase = Costobase;
     }
