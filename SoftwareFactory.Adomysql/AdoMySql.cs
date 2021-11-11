@@ -11,6 +11,12 @@ namespace SoftwareFactory.Adomysql
 
         public MapCliente MapCliente { get; set; }
        
+        public AdoMySql(AdoAGBD ado)
+        {
+            Ado = ado;
+
+            
+        }
         public void AltaCliente(Cliente cliente)
         {
             throw new NotImplementedException();
