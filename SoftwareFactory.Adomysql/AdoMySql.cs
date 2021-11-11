@@ -6,9 +6,8 @@ namespace SoftwareFactory.Adomysql
 {
     public class AdoMySql : IAdo
     {
-        
-        
-        
+        public MapCliente MapCliente { get; set; }
+       
         public void AltaCliente(Cliente cliente)
         {
             throw new NotImplementedException();
