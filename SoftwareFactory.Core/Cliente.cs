@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 namespace SoftwareFactory.Core
 {
     public class Cliente

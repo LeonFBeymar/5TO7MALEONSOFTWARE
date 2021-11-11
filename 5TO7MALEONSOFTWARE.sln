@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareFactory.Core", "SoftwareFactory.Core\SoftwareFactory.Core.csproj", "{33A58F74-6769-4D4B-81E4-4661025E24D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftwareFactory.Core", "SoftwareFactory.Core\SoftwareFactory.Core.csproj", "{33A58F74-6769-4D4B-81E4-4661025E24D5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftwareFactory.Adomysql", "SoftwareFactory.Adomysql\SoftwareFactory.Adomysql.csproj", "{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,9 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{33A58F74-6769-4D4B-81E4-4661025E24D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +29,23 @@ Global
 		{33A58F74-6769-4D4B-81E4-4661025E24D5}.Release|x64.Build.0 = Release|Any CPU
 		{33A58F74-6769-4D4B-81E4-4661025E24D5}.Release|x86.ActiveCfg = Release|Any CPU
 		{33A58F74-6769-4D4B-81E4-4661025E24D5}.Release|x86.Build.0 = Release|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Debug|x64.Build.0 = Debug|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Debug|x86.Build.0 = Debug|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Release|x64.ActiveCfg = Release|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Release|x64.Build.0 = Release|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Release|x86.ActiveCfg = Release|Any CPU
+		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9E8A002-4C9A-4381-B879-FDE4AE0178DB}
 	EndGlobalSection
 EndGlobal
