@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using SoftwareFactory.Core;
+using et12.edu.ar.AGBD.Ado;
 
 namespace SoftwareFactory.Adomysql
 {
     public class AdoMySql : IAdo
     {
+        public AdoAGBD Ado { get; set; }
+
         public MapCliente MapCliente { get; set; }
        
         public void AltaCliente(Cliente cliente)
