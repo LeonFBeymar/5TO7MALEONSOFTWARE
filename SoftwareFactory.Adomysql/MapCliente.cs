@@ -40,6 +40,8 @@ namespace SoftwareFactory.Adomysql
             .AgregarParametro();
                 
                 
-        } 
+        }
+        
+        public List<Cliente> ObtenerClientes() => ColeccionDesdeTabla();
     }
 }

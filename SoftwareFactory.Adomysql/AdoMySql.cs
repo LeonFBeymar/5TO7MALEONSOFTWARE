@@ -17,17 +17,13 @@ namespace SoftwareFactory.Adomysql
             MapCliente = new MapCliente(ado);
             
         }
-        public void AltaCliente(Cliente cliente)
-        {
-            throw new NotImplementedException();
-        }
+        public void AltaCliente(Cliente cliente) => MapCliente.AltaCliente(cliente);
 
+        public List<Cliente> ObtenerClientes() => MapCliente.ObtenerClientes();
+        
+        
+        
         public void AltaProyecto(Proyecto proyecto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Cliente> ObtenerClientes()
         {
             throw new NotImplementedException();
         }
