@@ -22,11 +22,18 @@ namespace SoftwareFactory.Adomysql
                 
             };
         public void AltaCliente(Cliente cliente)
-            => EjecutarComandoCon("altaCliente", ConfigurarAltaCliente, Cliente);
+            => EjecutarComandoCon("altaCliente", ConfigurarAltaCliente, cliente);
         public void ConfigurarAltaCliente(Cliente cliente)
         {
             SetComandoSP("AltaCliente");
 
+            BP.CrearParametro("unCuit")
+            .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
+            .SetValor(cliente.Cuit)
+            .AgregarParametro();
+
+            
+            
             BP.CrearParametro("unaRazonSocial")
             .SetTipoVarchar(45)
             .SetValor(cliente.RazonSocial)
