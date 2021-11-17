@@ -19,6 +19,7 @@ namespace SoftwareFactory.Adomysql
              {
                  Id = Convert.ToInt32(fila["idRubro"]),
                  descripcion = fila["descripcion"].ToString(),
+                 cliente = Convert.ToInt32(fila["cuit"]),
                  presupuesto = Convert.ToDouble(fila["presupuesto"]),
                  inicio = Convert.ToDateTime(fila["inicio"]),
                  fin = Convert.ToDateTime(fila["fin"]),
@@ -33,6 +34,11 @@ namespace SoftwareFactory.Adomysql
             BP.CrearParametroSalida("unIdProyceto")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
               .AgregarParametro();
+
+            BP.CrearParametro("unCuit")
+             .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
+             .SetValor(proyecto.cliente.Cuit)
+             .AgregarParametro();
 
             BP.CrearParametro("unPresupuesto")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Double)
