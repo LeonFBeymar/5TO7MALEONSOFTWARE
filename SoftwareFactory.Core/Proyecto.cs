@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace SoftwareFactory.Core
 {
     public class Proyecto

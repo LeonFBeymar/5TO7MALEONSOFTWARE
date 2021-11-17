@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="et12.edu.ar.AGBD-Ado" Version="0.10.0-aplha" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SoftwareFactory.Core\SoftwareFactory.Core.csproj" />
   </ItemGroup>
 

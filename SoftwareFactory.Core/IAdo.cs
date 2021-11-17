@@ -6,6 +6,7 @@ namespace SoftwareFactory.Core
     {
         void AltaCliente(Cliente cliente);
         void AltaProyecto(Proyecto proyecto);
+
         List<Cliente> ObtenerClientes();
         List<Proyecto> ObtenerProyectos();
     }

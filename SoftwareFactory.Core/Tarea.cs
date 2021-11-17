@@ -1,3 +1,5 @@
+using System;
+
 namespace SoftwareFactory.Core
 {
     public class Tarea
@@ -15,7 +17,6 @@ namespace SoftwareFactory.Core
     
     public Tarea(DateTime Inicio, DateTime Fin)
     {
-        this.id = Id;
         this.inicio = Inicio;
         this.fin = Fin;
         empleado = new Empleado();
