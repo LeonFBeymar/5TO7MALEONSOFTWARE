@@ -1,18 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using et12.edu.ar.AGBD.Ado;
 using et12.edu.ar.AGBD.Mapeadores;
+using System;
+using System.Data;
+using System.Collections.Generic;
+using SoftwareFactory.Core;
 
 namespace SoftwareFactory.Adomysql
 {
-    public class MapCliente : Mapeador<MapCliente>
+    public class MapCliente : Mapeador<Cliente>
     {
-        public override MapCliente ObjetoDesdeFila(DataRow fila)
+        public MapCliente(AdoAGBD ado) : base(ado)
         {
-            throw new NotImplementedException();
+            Tabla = "Cliente";
         }
+
+        public override Cliente ObjetoDesdeFila(DataRow fila)
+            => new Cliente()
+            {
+                Cuit = Convert.ToInt32(fila["Cuit"]),
+                RazonSocial = fila["RazonSocial"].ToString()
+                
+            };
+        public void AltaCliente(Cliente cliente)
+            => EjecutarComandoCon("altaCliente", ConfigurarAltaCliente, Cliente);
+        public void ConfigurarAltaCliente(Cliente cliente)
+        {
+            SetComandoSP("AltaCliente");
+
+            BP.CrearParametro("unaRazonSocial")
+            .SetTipoVarchar(45)
+            .SetValor(cliente.RazonSocial)
+            .AgregarParametro();
+                
+                
+        } 
     }
 }

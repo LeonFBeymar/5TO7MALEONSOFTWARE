@@ -14,7 +14,7 @@ namespace SoftwareFactory.Adomysql
         public AdoMySql(AdoAGBD ado)
         {
             Ado = ado;
-
+            MapCliente = new MapCliente(ado);
             
         }
         public void AltaCliente(Cliente cliente)
