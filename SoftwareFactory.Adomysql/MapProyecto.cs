@@ -17,13 +17,37 @@ namespace SoftwareFactory.Adomysql
 
              => new Proyecto()
              {
-                 Id = Convert.ToByte(fila["idRubro"]),
+                 Id = Convert.ToInt32(fila["idRubro"]),
                  descripcion = fila["descripcion"].ToString(),
-                 presupuesto = Convert.ToDouble(fila["descripcion"]),
-                 inicio = Convert.ToDateTime(fila["descripcion"]),
-                 fin = Convert.ToDateTime(fila["descripcion"])
+                 presupuesto = Convert.ToDouble(fila["presupuesto"]),
+                 inicio = Convert.ToDateTime(fila["inicio"]),
+                 fin = Convert.ToDateTime(fila["fin"]),
              };
+        public void AltaProyecto(Proyecto proyecto)
+           => EjecutarComandoCon("altaRubro", ConfigurarAltaProyecto, proyecto);
 
+        private void ConfigurarAltaProyecto(Proyecto proyecto)
+        {
+            SetComandoSP("altaProyecto");
 
+            BP.CrearParametroSalida("unIdProyceto")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
+              .AgregarParametro();
+
+            BP.CrearParametro("unPresupuesto")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Double)
+              .SetValor(proyecto.descripcion)
+              .AgregarParametro();
+
+            BP.CrearParametro("unInicio")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.DateTime)
+              .SetValor(proyecto.inicio)
+              .AgregarParametro();
+
+            BP.CrearParametro("unFin")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.DateTime)
+              .SetValor(proyecto.fin)
+              .AgregarParametro();
+        }
     }
 }
