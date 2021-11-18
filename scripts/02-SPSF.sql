@@ -45,6 +45,13 @@ BEGIN
 				VALUES (unCuil, unNombre, unApellido, unaContratacion);
 END $$
 
+DELIMITER $$
+CREATE PROCEDURE llamarCliente (unCuit INT)
+BEGIN
+	SELECT *
+	FROM Cliente
+	WHERE cuit = unCuit
+END $$
 
 
 DELIMITER $$
