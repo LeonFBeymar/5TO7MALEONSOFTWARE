@@ -37,9 +37,12 @@ namespace SoftwareFactory.Adomysql
             BP.CrearParametro("unaRazonSocial")
             .SetTipoVarchar(45)
             .SetValor(cliente.RazonSocial)
-            .AgregarParametro();
-                
-                
+            .AgregarParametro();     
+        }
+        public void ObtenerCliente(int cuit)
+        {
+            SetComandoSP("llamarCliente");
+
         }
         
         public List<Cliente> ObtenerClientes() => ColeccionDesdeTabla();
