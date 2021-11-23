@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftwareFactory.Core", "Sof
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftwareFactory.Adomysql", "SoftwareFactory.Adomysql\SoftwareFactory.Adomysql.csproj", "{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareFactory.GUI", "SoftwareFactory.GUI\SoftwareFactory.GUI.csproj", "{5FB5B83F-4C9E-4538-8129-67BB43675B50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Release|x64.Build.0 = Release|Any CPU
 		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Release|x86.ActiveCfg = Release|Any CPU
 		{37173D12-9C3A-4CAE-972F-3CE020E8AC9A}.Release|x86.Build.0 = Release|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Debug|x64.Build.0 = Debug|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Debug|x86.Build.0 = Debug|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Release|x64.ActiveCfg = Release|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Release|x64.Build.0 = Release|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Release|x86.ActiveCfg = Release|Any CPU
+		{5FB5B83F-4C9E-4538-8129-67BB43675B50}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
