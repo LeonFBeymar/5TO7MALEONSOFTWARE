@@ -3,27 +3,32 @@ using et12.edu.ar.AGBD.Mapeadores;
 using SoftwareFactory.Core;
 using System;
 using System.Data;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace SoftwareFactory.Adomysql
 {
-    class MapProyecto : Mapeador<Proyecto>
+    public class MapProyecto : Mapeador<Proyecto>
     {
         public MapProyecto(AdoAGBD ado) : base(ado)
         {
             Tabla = "Proyecto";
         }
         public override Proyecto ObjetoDesdeFila(DataRow fila)
+        {
+            Cliente clienteExistente = this. ;
 
-             => new Proyecto()
-             {
-                 Id = Convert.ToInt32(fila["idRubro"]),
-                 descripcion = fila["descripcion"].ToString(),
-                 cliente = Convert.ToInt32(fila["cuit"]),
-                 presupuesto = Convert.ToDouble(fila["presupuesto"]),
-                 inicio = Convert.ToDateTime(fila["inicio"]),
-                 fin = Convert.ToDateTime(fila["fin"]),
-             };
+            return new Proyecto()
+            {
+                Id = Convert.ToInt32(fila["id"]),
+                descripcion = fila["descripcion"].ToString(),
+                cliente = clienteExistente,
+                presupuesto = Convert.ToDouble(fila["presupuesto"]),
+                inicio = Convert.ToDateTime(fila["inicio"]),
+                fin = Convert.ToDateTime(fila["fin"]),
+            };
+        }
+
         public void AltaProyecto(Proyecto proyecto)
            => EjecutarComandoCon("altaRubro", ConfigurarAltaProyecto, proyecto);
 

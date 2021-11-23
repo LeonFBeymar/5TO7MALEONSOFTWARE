@@ -10,7 +10,9 @@ namespace SoftwareFactory.Adomysql
         public AdoAGBD Ado { get; set; }
 
         public MapCliente MapCliente { get; set; }
-       
+
+        public MapProyecto MapProyecto { get; set; }
+
         public AdoMySql(AdoAGBD ado)
         {
             Ado = ado;
