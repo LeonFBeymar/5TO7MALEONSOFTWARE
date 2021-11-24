@@ -23,8 +23,11 @@ namespace SoftwareFactory.GUI
             menuProyecto.agregarMenu(new MenuAltaProyecto());
             menuProyecto.agregarMenu(new MenuListaProyecto() { Nombre = "Lista PRoyectos" });
 
-            menuCliente.mostrar();
-            menuProyecto.mostrar();
+            var menuPrincipal = new MenuCompuesto() { Nombre = "Menu Administrador"};
+            menuPrincipal.agregarMenu(menuCliente);
+            menuPrincipal.agregarMenu(menuProyecto);
+
+            menuPrincipal.mostrar();
         }
     }
 }
