@@ -20,5 +20,10 @@
   <ItemGroup>
     <PackageReference Include="BiblioMenu" Version="1.1.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SoftwareFactory.Adomysql\SoftwareFactory.Adomysql.csproj" />
+    <ProjectReference Include="..\SoftwareFactory.Core\SoftwareFactory.Core.csproj" />
+  </ItemGroup>
   
 </Project>

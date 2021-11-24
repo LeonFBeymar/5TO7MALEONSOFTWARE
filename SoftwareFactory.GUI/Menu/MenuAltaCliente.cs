@@ -10,6 +10,7 @@ namespace SoftwareFactory.GUI.Menu
 {
     public class MenuAltaCliente : MenuComponente
     {
+        
         public MenuAltaCliente cliente { get; set; }
 
         public MenuAltaCliente() { }
