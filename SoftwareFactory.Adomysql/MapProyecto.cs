@@ -12,21 +12,23 @@ namespace SoftwareFactory.Adomysql
     {
         public MapCliente Mapcliente { get; set; }
 
-        public MapProyecto(AdoAGBD ado) : base(ado)
-        {
-            Tabla = "Proyecto";
-        }
+
+        public MapProyecto(AdoAGBD ado) : base(ado) => Tabla = "Proyecto";
+        public MapProyecto(MapCliente mapcliente) : this(mapcliente.AdoAGBD)
+           => Mapcliente = mapcliente;
+        
         public override Proyecto ObjetoDesdeFila(DataRow fila)
             => new Proyecto()
             {
-            
-                Id = Convert.ToInt32(fila["id"]),
-                descripcion = fila["descripcion"].ToString(),
+
+                idProyecto = Convert.ToInt32(fila["idProyecto"]),
                 cliente = Mapcliente.ClientePorCuit(Convert.ToInt32(fila["Cuit"])),
+                descripcion = fila["descripcion"].ToString(),
                 presupuesto = Convert.ToDouble(fila["presupuesto"]),
                 inicio = Convert.ToDateTime(fila["inicio"]),
                 fin = Convert.ToDateTime(fila["fin"]),
             };
+       
         public List<Proyecto> ObtenerProyecto() => ColeccionDesdeTabla();
         public List<Proyecto> ObtenerProyecto(Cliente cliente)
         {
@@ -48,6 +50,7 @@ namespace SoftwareFactory.Adomysql
 
             BP.CrearParametroSalida("unIdProyecto")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
+              .SetValor(proyecto.idProyecto)
               .AgregarParametro();
 
             BP.CrearParametro("unCuit")

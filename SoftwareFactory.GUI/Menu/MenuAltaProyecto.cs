@@ -30,7 +30,7 @@ namespace SoftwareFactory.GUI.Menu
 
             Proyecto = new Proyecto()
             {
-                Id = id,
+                idProyecto = id,
                 descripcion = descripcion,
                 presupuesto = presupuesto,
                 inicio = inicio,

@@ -8,7 +8,7 @@ namespace SoftwareFactory.GUI.Menu
     class MenuListaProyecto : MenuListador<Proyecto>
     {
         public override void imprimirElemento(Proyecto elemento)
-            => Console.WriteLine($"{elemento.Id} -- {elemento.descripcion} -- {elemento.presupuesto} -- {elemento.inicio} -- {elemento.fin} -- {elemento.cliente.Cuit}");
+            => Console.WriteLine($"{elemento.idProyecto} -- {elemento.descripcion} -- {elemento.presupuesto} -- {elemento.inicio} -- {elemento.fin} -- {elemento.cliente.Cuit}");
 
         public override List<Proyecto> obtenerLista() => Program.Ado.ObtenerProyectos();
     }

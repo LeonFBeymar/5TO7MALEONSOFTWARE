@@ -5,7 +5,7 @@ namespace SoftwareFactory.Core
 {
     public class Proyecto
     {
-        public int Id {get; set;}
+        public int idProyecto {get; set;}
         public Cliente cliente;
         public string descripcion {get; set;}
         public double presupuesto {get; set;}
@@ -21,7 +21,7 @@ namespace SoftwareFactory.Core
 
         public Proyecto(int id, string Descripcion, double Presupuesto, DateTime Inicio, DateTime Fin)
         {
-            this.Id = id;
+            this.idProyecto = id;
             this.descripcion = Descripcion;
             this.presupuesto = Presupuesto;
             this.inicio = Inicio;
