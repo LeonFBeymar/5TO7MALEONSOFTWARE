@@ -24,6 +24,7 @@ namespace SoftwareFactory.GUI
             menuProyecto.agregarMenu(new MenuListaProyecto() { Nombre = "Lista PRoyectos" });
 
             menuCliente.mostrar();
+            menuProyecto.mostrar();
         }
     }
 }
