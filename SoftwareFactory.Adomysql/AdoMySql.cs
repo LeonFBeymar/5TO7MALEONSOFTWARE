@@ -22,17 +22,13 @@ namespace SoftwareFactory.Adomysql
         public void AltaCliente(Cliente cliente) => MapCliente.AltaCliente(cliente);
 
         public List<Cliente> ObtenerClientes() => MapCliente.ObtenerClientes();
-        
-        
-        
-        public void AltaProyecto(Proyecto proyecto)
-        {
-            throw new NotImplementedException();
-        }
 
-        public List<Proyecto> ObtenerProyectos()
-        {
-            throw new NotImplementedException();
-        }
+        public void AltaProyecto(Proyecto proyecto) => MapProyecto.AltaProyecto(proyecto);
+
+        public List<Proyecto> ObtenerProyectos() => MapProyecto.ObtenerProyecto();
+
     }
 }
+
+
+        
