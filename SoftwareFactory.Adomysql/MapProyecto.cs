@@ -15,20 +15,17 @@ namespace SoftwareFactory.Adomysql
             Tabla = "Proyecto";
         }
         public override Proyecto ObjetoDesdeFila(DataRow fila)
-        {
-            Cliente clienteExistente = this. ;
-
-            return new Proyecto()
+            => new Proyecto()
             {
+            
                 Id = Convert.ToInt32(fila["id"]),
                 descripcion = fila["descripcion"].ToString(),
-                cliente = clienteExistente,
+                
                 presupuesto = Convert.ToDouble(fila["presupuesto"]),
                 inicio = Convert.ToDateTime(fila["inicio"]),
                 fin = Convert.ToDateTime(fila["fin"]),
             };
-        }
-
+       
         public void AltaProyecto(Proyecto proyecto)
            => EjecutarComandoCon("altaRubro", ConfigurarAltaProyecto, proyecto);
 
@@ -62,3 +59,5 @@ namespace SoftwareFactory.Adomysql
         }
     }
 }
+
+       

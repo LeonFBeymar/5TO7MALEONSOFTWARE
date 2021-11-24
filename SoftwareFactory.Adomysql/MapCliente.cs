@@ -39,18 +39,7 @@ namespace SoftwareFactory.Adomysql
             .SetValor(cliente.RazonSocial)
             .AgregarParametro();     
         }
-        public Cliente ObtenerCliente(Cliente cliente)
-        {
-            EjecutarComandoCon("llamarCliente", Configuracionllamarcliente, cliente);
-        }
-        public void Configuracionllamarcliente(Cliente cliente)
-        {
         
-            SetComandoSP("llamarCliente");
-
-            BP.SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
-              .AgregarParametro();
-        }
             
         public List<Cliente> ObtenerClientes() => ColeccionDesdeTabla();
 
