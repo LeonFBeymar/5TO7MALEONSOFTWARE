@@ -39,7 +39,17 @@ namespace SoftwareFactory.Adomysql
             .SetValor(cliente.RazonSocial)
             .AgregarParametro();     
         }
-        
+        public Cliente ClientePorCuit(int cuit)
+        {
+            SetComandoSP("ObtenerCliente");
+
+            BP.CrearParametro("unCuit")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
+              .SetValor(cuit)
+              .AgregarParametro();
+
+            return ElementoDesdeSP();
+        }
             
         public List<Cliente> ObtenerClientes() => ColeccionDesdeTabla();
 
