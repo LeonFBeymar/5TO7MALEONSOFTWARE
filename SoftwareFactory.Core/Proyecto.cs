@@ -10,7 +10,7 @@ namespace SoftwareFactory.Core
         public string descripcion {get; set;}
         public double presupuesto {get; set;}
         public DateTime inicio {get; set;}
-        public DateTime fin {get; set;}
+        public DateTime? fin {get; set;}
         public List<Requerimiento> requerimientos; 
 
         public Proyecto()

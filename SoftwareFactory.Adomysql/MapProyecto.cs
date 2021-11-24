@@ -26,7 +26,7 @@ namespace SoftwareFactory.Adomysql
                 descripcion = fila["descripcion"].ToString(),
                 presupuesto = Convert.ToDouble(fila["presupuesto"]),
                 inicio = Convert.ToDateTime(fila["inicio"]),
-                fin = Convert.ToDateTime(fila["fin"]),
+                fin = fila["fin"] != DBNull.Value ? Convert.ToDateTime(fila["fin"]) : null
             };
        
         public List<Proyecto> ObtenerProyecto() => ColeccionDesdeTabla();
