@@ -19,6 +19,10 @@ namespace SoftwareFactory.GUI
             menuCliente.agregarMenu(new MenuAltaCliente());
             menuCliente.agregarMenu(new MenuListaCliente() { Nombre = "Lista Clientes"});
 
+            var menuProyecto = new MenuCompuesto() { Nombre = "Menu Proyecto" };
+            menuProyecto.agregarMenu(new MenuAltaProyecto());
+            menuProyecto.agregarMenu(new MenuListaProyecto() { Nombre = "Lista PRoyectos" });
+
             menuCliente.mostrar();
         }
     }
