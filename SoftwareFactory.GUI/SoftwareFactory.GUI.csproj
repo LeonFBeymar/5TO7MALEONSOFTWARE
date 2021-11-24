@@ -16,5 +16,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BiblioMenu" Version="1.1.0" />
+  </ItemGroup>
   
 </Project>
