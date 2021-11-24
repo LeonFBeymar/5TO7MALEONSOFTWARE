@@ -42,7 +42,7 @@ namespace SoftwareFactory.Adomysql
         }
         public Cliente ClientePorCuit(int cuit)
         {
-            SetComandoSP("ObtenerCliente");
+            SetComandoSP("llamarCliente");
 
             BP.CrearParametro("unCuit")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)

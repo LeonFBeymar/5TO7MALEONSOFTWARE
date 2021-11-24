@@ -30,7 +30,7 @@ namespace SoftwareFactory.Adomysql
         public List<Proyecto> ObtenerProyecto() => ColeccionDesdeTabla();
         public List<Proyecto> ObtenerProyecto(Cliente cliente)
         {
-            SetComandoSP("ProyectosPorCliente");
+            SetComandoSP("llamarCliente");
 
             BP.CrearParametro("unCuit")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
