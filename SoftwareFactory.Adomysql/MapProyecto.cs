@@ -46,7 +46,7 @@ namespace SoftwareFactory.Adomysql
         {
             SetComandoSP("altaProyecto");
 
-            BP.CrearParametroSalida("unIdProyceto")
+            BP.CrearParametroSalida("unIdProyecto")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
               .AgregarParametro();
 

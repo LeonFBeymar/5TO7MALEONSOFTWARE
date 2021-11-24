@@ -2,7 +2,7 @@ DELIMITER $$
 USE softwarefactory $$
 SELECT 'Creando SPSF' AS 'Estado' $$
 
-
+DELIMITER $$
 CREATE PROCEDURE AltaTecnologia (unidTecnologia TINYINT, unaTecnologia VARCHAR(20), unCostoBase DECIMAL(10,2))
 BEGIN
 	INSERT INTO Tecnologia (idTecnologia, Tecnologia, CostoBase)
@@ -50,7 +50,7 @@ CREATE PROCEDURE llamarCliente (unCuit INT)
 BEGIN
 	SELECT *
 	FROM Cliente
-	WHERE cuit = unCuit
+	WHERE cuit = unCuit;
 END $$
 
 
@@ -105,7 +105,7 @@ CREATE FUNCTION sueldoMensual (unCuil INT) RETURNS DECIMAL(10.2)
 BEGIN
 	DECLARE sueldoApagar DECIMAL(10.2);
     
-SELECT TIMESTAMPDIFF(YEAR, contratacion, CURDATE()) * 1000 + SUM(calificacion * costoBase) INTO sueldoApagar
+	SELECT TIMESTAMPDIFF(YEAR, contratacion, CURDATE()) * 1000 + SUM(calificacion * costoBase) INTO sueldoApagar
     FROM experiencia E
     INNER JOIN empleado EM on E.cuil = EM.cuil
     INNER JOIN Tecnologia T on E.idTecnologia = T.idTecnologia
