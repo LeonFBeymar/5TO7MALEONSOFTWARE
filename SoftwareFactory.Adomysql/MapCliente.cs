@@ -9,6 +9,7 @@ namespace SoftwareFactory.Adomysql
 {
     public class MapCliente : Mapeador<Cliente>
     {
+
         public MapCliente(AdoAGBD ado) : base(ado)
         {
             Tabla = "Cliente";
