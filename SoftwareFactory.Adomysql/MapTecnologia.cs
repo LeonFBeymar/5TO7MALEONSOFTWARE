@@ -24,7 +24,7 @@ namespace SoftwareFactory.Adomysql
          };
 
         public void AltaTecnologia(Tecnologia tecnologia)
-            => EjecutarComandoCon("altaTecnologia", ConfigurarAltaTecnologia, PostAltaTecnologia, tecnologia);
+            => EjecutarComandoCon("AltaTecnologia", ConfigurarAltaTecnologia, PostAltaTecnologia, tecnologia);
         public void ConfigurarAltaTecnologia(Tecnologia tecnologia)
         {
 

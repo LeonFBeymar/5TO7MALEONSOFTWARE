@@ -13,7 +13,7 @@ namespace SoftwareFactory.GUI.Menu
         }
             
         public override void imprimirElemento(Tecnologia elemento)
-            => Console.WriteLine($"- tecnologia: {elemento.tecnologia} --costo base: ${elemento.costoBase} -");
+            => Console.WriteLine($"- tecnologia: {elemento.tecnologia}\t costo base: ${elemento.costoBase} -");
 
         public override List<Tecnologia> obtenerLista() => Program.Ado.ObtenerTecnologias();
     }
