@@ -59,11 +59,11 @@ namespace SoftwareFactory.Adomysql
 
             BP.CrearParametro("unPresupuesto")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Double)
-              .SetValor(proyecto.descripcion)
+              .SetValor(proyecto.presupuesto)
               .AgregarParametro();
 
             BP.CrearParametro("unaDescripcion")
-              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Double)
+              .SetTipoVarchar(200)
               .SetValor(proyecto.descripcion)
               .AgregarParametro();
 
