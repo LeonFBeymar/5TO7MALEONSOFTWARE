@@ -20,7 +20,6 @@ namespace SoftwareFactory.GUI.Menu
         {
             base.mostrar();
 
-            var id = int.Parse(prompt("ingrese id: "));
             var descripcion = prompt("ingrese Descripcion");
             var presupuesto = double.Parse(prompt("ingrese Presupuesto"));
             var inicio = DateTime.Parse(prompt("ingrese fecha de inicio el Proyecto"));
@@ -29,8 +28,7 @@ namespace SoftwareFactory.GUI.Menu
             var Cliente = menuListaClientes.seleccionarElemento();
 
             Proyecto = new Proyecto()
-            {
-                idProyecto = id,
+            {               
                 descripcion = descripcion,
                 presupuesto = presupuesto,
                 inicio = inicio,

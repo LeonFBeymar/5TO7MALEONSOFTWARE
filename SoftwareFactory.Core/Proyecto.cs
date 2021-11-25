@@ -19,9 +19,9 @@ namespace SoftwareFactory.Core
         }
 
 
-        public Proyecto(int id, string Descripcion, double Presupuesto, DateTime Inicio, DateTime Fin)
+        public Proyecto( string Descripcion, double Presupuesto, DateTime Inicio, DateTime Fin)
         {
-            this.idProyecto = id;
+            
             this.descripcion = Descripcion;
             this.presupuesto = Presupuesto;
             this.inicio = Inicio;

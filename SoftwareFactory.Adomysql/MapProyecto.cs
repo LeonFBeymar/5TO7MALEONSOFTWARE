@@ -42,7 +42,7 @@ namespace SoftwareFactory.Adomysql
             return ColeccionDesdeSP();
         }
         public void AltaProyecto(Proyecto proyecto)
-           => EjecutarComandoCon("altaRubro", ConfigurarAltaProyecto, proyecto);
+           => EjecutarComandoCon("altaRubro", ConfigurarAltaProyecto, PostAltaProyecto, proyecto);
 
         private void ConfigurarAltaProyecto(Proyecto proyecto)
         {
@@ -50,7 +50,6 @@ namespace SoftwareFactory.Adomysql
 
             BP.CrearParametroSalida("unIdProyecto")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
-              .SetValor(proyecto.idProyecto)
               .AgregarParametro();
 
             BP.CrearParametro("unCuit")
@@ -73,6 +72,8 @@ namespace SoftwareFactory.Adomysql
               .SetValor(proyecto.fin)
               .AgregarParametro();
         }
+        public void PostAltaProyecto(Proyecto proyecto)
+            => proyecto.idProyecto = Convert.ToInt32(GetParametro("unidProyecto").Value);
     }
 }
 

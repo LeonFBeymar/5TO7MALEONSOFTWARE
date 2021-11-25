@@ -24,10 +24,11 @@ BEGIN
 END $$
 
 DELIMITER $$
-CREATE PROCEDURE AltaProyecto (unidProyecto SMALLINT, unCuit INT, unaDescripcion VARCHAR(200), unPresupuesto DECIMAL(10,2), unInicio DATE, unFin DATE)
+CREATE PROCEDURE AltaProyecto (OUT unidProyecto SMALLINT, unCuit INT, unaDescripcion VARCHAR(200), unPresupuesto DECIMAL(10,2), unInicio DATE, unFin DATE)
 BEGIN
 	INSERT INTO Proyecto (idProyecto, Cuit, Descripcion, Presupuesto, inicio, fin)
 				VALUES (unidProyecto, unCuit, unaDescripcion, unPresupuesto, unInicio, unFin);
+				SET unIdProyecto = LAST_INSERT_ID();
 END $$
 
 

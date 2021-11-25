@@ -10,7 +10,7 @@ namespace SoftwareFactory.GUI.Menu
         public override void imprimirElemento(Proyecto elemento)
         {
             string fin = elemento.fin.HasValue ? elemento.fin.Value.ToShortDateString() : "En Proceso";
-            Console.WriteLine($"{elemento.idProyecto} -- {elemento.descripcion} -- {elemento.presupuesto} -- {elemento.inicio.ToShortDateString()} -- {fin} -- {elemento.cliente.Cuit}");
+            Console.WriteLine($"- {elemento.idProyecto} -- {elemento.descripcion} -- {elemento.presupuesto} -- {elemento.inicio.ToShortDateString()} -- {fin} -- {elemento.cliente.Cuit} -");
         }
 
         public override List<Proyecto> obtenerLista() => Program.Ado.ObtenerProyectos();
