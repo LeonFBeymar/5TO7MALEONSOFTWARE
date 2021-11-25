@@ -26,7 +26,7 @@ namespace SoftwareFactory.GUI.Menu
             var presupuesto = double.Parse(prompt("ingrese Presupuesto"));
             var inicio = DateTime.Parse(prompt("ingrese fecha de inicio el Proyecto"));
             var fin = DateTime.Parse(prompt("ingrese fecha de finalizado el Proyecto"));
-            Console.WriteLine("Seleccionar un Cuit: ");
+            Console.WriteLine("Seleccionar valor x) ");
             var Cliente = MenuListaClientes.seleccionarElemento();
 
             Proyecto = new Proyecto()

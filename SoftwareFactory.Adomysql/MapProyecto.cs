@@ -62,6 +62,11 @@ namespace SoftwareFactory.Adomysql
               .SetValor(proyecto.descripcion)
               .AgregarParametro();
 
+            BP.CrearParametro("unaDescripcion")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Double)
+              .SetValor(proyecto.descripcion)
+              .AgregarParametro();
+
             BP.CrearParametro("unInicio")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.DateTime)
               .SetValor(proyecto.inicio)
