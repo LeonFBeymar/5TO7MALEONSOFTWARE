@@ -57,14 +57,14 @@ namespace SoftwareFactory.Adomysql
              .SetValor(proyecto.cliente.Cuit)
              .AgregarParametro();
 
-            BP.CrearParametro("unPresupuesto")
-              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Double)
-              .SetValor(proyecto.presupuesto)
-              .AgregarParametro();
-
             BP.CrearParametro("unaDescripcion")
               .SetTipoVarchar(200)
               .SetValor(proyecto.descripcion)
+              .AgregarParametro();
+
+            BP.CrearParametro("unPresupuesto")
+              .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Double)
+              .SetValor(proyecto.presupuesto)
               .AgregarParametro();
 
             BP.CrearParametro("unInicio")

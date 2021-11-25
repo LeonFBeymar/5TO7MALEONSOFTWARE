@@ -15,10 +15,10 @@ namespace SoftwareFactory.GUI
             var adoAGBD =FactoryAdoAGBD.GetAdoMySQL("appSettings.json", "test");
             Ado = new AdoMySql(adoAGBD);
 
-            var listadorClientes = new MenuListaCliente("Lista Clientes");
+            var listadorClientes = new MenuListaCliente("Listado de Clientes");
             var menuCliente = new MenuCompuesto("Menu Cliente", new MenuAltaCliente(), listadorClientes);
 
-            var menuProyecto = new MenuCompuesto("Menu Proyecto", new MenuAltaProyecto(listadorClientes), new MenuListaProyecto("Lista Proyectos"));
+            var menuProyecto = new MenuCompuesto("Menu Proyecto", new MenuAltaProyecto(listadorClientes), new MenuListaProyecto("Listado de Proyectos"));
 
             var menuPrincipal = new MenuCompuesto("Menu Administrador", menuCliente ,menuProyecto);
 

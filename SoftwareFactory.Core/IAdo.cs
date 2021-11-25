@@ -9,5 +9,9 @@ namespace SoftwareFactory.Core
 
         List<Cliente> ObtenerClientes();
         List<Proyecto> ObtenerProyectos();
+
+        void AltaTecnologia(Tecnologia tecnologia);
+
+        List<Tecnologia> ObtenerTecnologias();
     }
 }

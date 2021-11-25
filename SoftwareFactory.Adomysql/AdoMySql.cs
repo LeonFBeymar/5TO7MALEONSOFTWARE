@@ -13,11 +13,14 @@ namespace SoftwareFactory.Adomysql
 
         public MapProyecto MapProyecto { get; set; }
 
+        public MapTecnologia MapTecnologia { get; set; }
+
         public AdoMySql(AdoAGBD ado)
         {
             Ado = ado;
             MapCliente = new MapCliente(ado);
             MapProyecto = new MapProyecto(MapCliente);
+            MapTecnologia = new MapTecnologia(ado);
         }
         public void AltaCliente(Cliente cliente) => MapCliente.AltaCliente(cliente);
 
@@ -27,6 +30,11 @@ namespace SoftwareFactory.Adomysql
 
         public List<Proyecto> ObtenerProyectos() => MapProyecto.ObtenerProyecto();
 
+        public void AltaTecnologia(Tecnologia tecnologia) => MapTecnologia.AltaTecnologia(tecnologia);
+
+        public List<Tecnologia> ObtenerTecnologias() => MapTecnologia.ObtenerTecnologia();
+
+        
     }
 }
 

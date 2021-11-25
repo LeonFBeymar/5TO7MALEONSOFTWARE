@@ -2,7 +2,7 @@ namespace SoftwareFactory.Core
 {
     public class Tecnologia
     {
-        public int Id {get; set;}
+        public int IdTecnologia {get; set;}
         public string tecnologia {get; set;}
         public decimal costoBase {get; set;}
     

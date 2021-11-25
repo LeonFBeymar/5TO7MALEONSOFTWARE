@@ -12,7 +12,7 @@ namespace SoftwareFactory.GUI.Menu
             Nombre = nombre;
         }
         public override void imprimirElemento(Cliente elemento)
-            => Console.WriteLine($"- {elemento.RazonSocial} -- {elemento.Cuit} -");
+            => Console.WriteLine($" Razon Social: {elemento.RazonSocial}\t Cuit: {elemento.Cuit} -");
 
         public override List<Cliente> obtenerLista() => Program.Ado.ObtenerClientes();
     }
