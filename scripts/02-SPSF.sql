@@ -3,10 +3,11 @@ USE softwarefactory $$
 SELECT 'Creando SPSF' AS 'Estado' $$
 
 DELIMITER $$
-CREATE PROCEDURE AltaTecnologia (unidTecnologia TINYINT, unaTecnologia VARCHAR(20), unCostoBase DECIMAL(10,2))
+CREATE PROCEDURE AltaTecnologia (OUT unidTecnologia TINYINT, unaTecnologia VARCHAR(20), unCostoBase DECIMAL(10,2))
 BEGIN
 	INSERT INTO Tecnologia (idTecnologia, Tecnologia, CostoBase)
 				VALUES (unidTecnologia, unaTecnologia, unCostoBase);
+				SET  unidTecnologia = LAST_INSERT_ID();
 END $$
 
 DELIMITER $$
