@@ -15,6 +15,6 @@ namespace SoftwareFactory.GUI.Menu
         public override void imprimirElemento(Tecnologia elemento)
             => Console.WriteLine($"- tecnologia: {elemento.tecnologia} --costo base: ${elemento.costoBase} -");
 
-        public override List<Cliente> obtenerLista() => Program.Ado.ObtenerClientes();
+        public override List<Tecnologia> obtenerLista() => Program.Ado.ObtenerTecnologias();
     }
 }

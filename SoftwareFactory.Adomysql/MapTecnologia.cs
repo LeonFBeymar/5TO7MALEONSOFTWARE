@@ -17,7 +17,7 @@ namespace SoftwareFactory.Adomysql
         public override Tecnologia ObjetoDesdeFila(DataRow fila)
          => new Tecnologia()
          {
-             IdTecnologia = Convert.ToInt32(fila["idTecnologia"]),
+             IdTecnologia = Convert.ToInt32(fila["IdTecnologia"]),
              tecnologia = fila["tecnologia"].ToString(),
              costoBase = Convert.ToDecimal(fila["CostoBase"])
          
@@ -45,6 +45,7 @@ namespace SoftwareFactory.Adomysql
               .AgregarParametro();
 
         }
+        
         public void PostAltaTecnologia(Tecnologia tecnologia)
             => tecnologia.IdTecnologia = Convert.ToInt32(GetParametro("unidTecnologia").Value);
 

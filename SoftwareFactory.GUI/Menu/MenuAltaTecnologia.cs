@@ -6,7 +6,7 @@ namespace SoftwareFactory.GUI.Menu
 {
     class MenuAltaTecnologia : MenuComponente
     {
-        public  Tecnologia Tecnologia { get; set; }
+        public Tecnologia Tecnologia { get; set; }
 
         public MenuAltaTecnologia(string nombre) : base(nombre)
         {
@@ -28,5 +28,6 @@ namespace SoftwareFactory.GUI.Menu
             };
 
             Program.Ado.AltaTecnologia(Tecnologia);
+        }
     }
 }

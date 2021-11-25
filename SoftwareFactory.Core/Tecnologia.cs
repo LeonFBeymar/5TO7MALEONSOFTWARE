@@ -10,9 +10,9 @@ namespace SoftwareFactory.Core
     {
 
     }
-    public Tecnologia(string Tcnologia, decimal Costobase)
+    public Tecnologia(string Tecnologia, decimal Costobase)
     {
-        this.tecnologia = Tcnologia;
+        this.tecnologia = Tecnologia;
         this.costoBase = Costobase;
     }
         

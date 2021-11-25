@@ -20,7 +20,9 @@ namespace SoftwareFactory.GUI
 
             var menuProyecto = new MenuCompuesto("Menu Proyecto", new MenuAltaProyecto(listadorClientes), new MenuListaProyecto("Listado de Proyectos"));
 
-            var menuPrincipal = new MenuCompuesto("Menu Administrador", menuCliente ,menuProyecto);
+            var menuTecnologia = new MenuCompuesto("Menu Tecnologia", new MenuAltaTecnologia(), new MenuListaTecnologia("Listado de Tecnologias"));
+            
+            var menuPrincipal = new MenuCompuesto("Menu Administrador", menuCliente ,menuProyecto,menuTecnologia);
 
             menuPrincipal.mostrar();
         }
