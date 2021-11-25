@@ -30,7 +30,7 @@ namespace SoftwareFactory.Adomysql
 
             SetComandoSP("AltaTecnologia");
 
-            BP.CrearParametro("unidTecnologia")
+            BP.CrearParametroSalida("unidTecnologia")
               .SetTipo(MySql.Data.MySqlClient.MySqlDbType.Int32)
               .AgregarParametro();
 

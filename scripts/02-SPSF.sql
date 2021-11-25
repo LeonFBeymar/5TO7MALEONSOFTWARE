@@ -5,8 +5,8 @@ SELECT 'Creando SPSF' AS 'Estado' $$
 DELIMITER $$
 CREATE PROCEDURE AltaTecnologia (OUT unidTecnologia TINYINT, unaTecnologia VARCHAR(20), unCostoBase DECIMAL(10,2))
 BEGIN
-	INSERT INTO Tecnologia (idTecnologia, Tecnologia, CostoBase)
-				VALUES (unidTecnologia, unaTecnologia, unCostoBase);
+	INSERT INTO Tecnologia ( Tecnologia, CostoBase)
+				VALUES ( unaTecnologia, unCostoBase);
 				SET  unidTecnologia = LAST_INSERT_ID();
 END $$
 
