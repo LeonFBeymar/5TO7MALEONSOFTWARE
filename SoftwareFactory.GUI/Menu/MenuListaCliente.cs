@@ -7,6 +7,10 @@ namespace SoftwareFactory.GUI.Menu
 {
     public class MenuListaCliente : MenuListador<Cliente>
     {
+        public MenuListaCliente(string nombre)
+        {
+            Nombre = nombre;
+        }
         public override void imprimirElemento(Cliente elemento)
             => Console.WriteLine($"- {elemento.RazonSocial} -- {elemento.Cuit} -");
 

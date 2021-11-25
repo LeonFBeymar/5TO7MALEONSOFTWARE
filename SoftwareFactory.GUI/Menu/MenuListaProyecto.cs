@@ -7,6 +7,11 @@ namespace SoftwareFactory.GUI.Menu
 {
     class MenuListaProyecto : MenuListador<Proyecto>
     {
+        public MenuListaProyecto(string nombre)
+        {
+            Nombre = nombre;
+        }
+
         public override void imprimirElemento(Proyecto elemento)
         {
             string fin = elemento.fin.HasValue ? elemento.fin.Value.ToShortDateString() : "En Proceso";

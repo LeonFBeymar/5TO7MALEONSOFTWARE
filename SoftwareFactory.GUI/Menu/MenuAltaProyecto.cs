@@ -9,12 +9,14 @@ namespace SoftwareFactory.GUI.Menu
     {
         
         public Proyecto Proyecto { get; private set; }
-        private MenuListaCliente menuListaClientes { get;  set; }
+        private MenuListaCliente MenuListaClientes { get;  set; }
 
-        public MenuAltaProyecto(string Nombre): base(Nombre)
+        public MenuAltaProyecto() :base("Alta Proyecto") { }
+
+        public MenuAltaProyecto(MenuListaCliente listaCliente) : this()
         {
+            MenuListaClientes = listaCliente;
         }
-        public MenuAltaProyecto() :this("Alta Proyecto") { }
 
         public override void mostrar()
         {
@@ -24,8 +26,8 @@ namespace SoftwareFactory.GUI.Menu
             var presupuesto = double.Parse(prompt("ingrese Presupuesto"));
             var inicio = DateTime.Parse(prompt("ingrese fecha de inicio el Proyecto"));
             var fin = DateTime.Parse(prompt("ingrese fecha de finalizado el Proyecto"));
-            Console.WriteLine("Seleccionar un Ciut: ");
-            var Cliente = menuListaClientes.seleccionarElemento();
+            Console.WriteLine("Seleccionar un Cuit: ");
+            var Cliente = MenuListaClientes.seleccionarElemento();
 
             Proyecto = new Proyecto()
             {               
